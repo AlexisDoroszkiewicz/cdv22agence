@@ -100,6 +100,35 @@ section > p {
     background: var(--light);
     border-radius: 20px;
     padding: 1em 2em;
+    position: relative;
+}
+
+#card1::before {
+    content: '';
+    background: url(../assets/stickers/flashb.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(0%, -30%) rotate(10deg);
+    height: 9em;
+    width: 9em;
+}
+
+#card1::after {
+    content: '';
+    background: url(../assets/stickers/flashg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(40%, 60%) rotate(90deg);
+    height: 4em;
+    width: 4em;
 }
 
 button {
@@ -112,6 +141,8 @@ button {
     margin: 1em 0;
     cursor: pointer;
     font-size: var(--fs-button);
+    font-weight: 600;
+    font-family: 'Open Sans';
 }
 
 .blank,

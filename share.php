@@ -184,7 +184,7 @@ $urlNoEncode = 'https://2022.seenk.com/result.php?' . $_SERVER['QUERY_STRING'];
               </a>
               <?php 
                     $subject = "J'ai fait mes vœux pour 2022 !";
-                    $body = "Hello, \n\n Une façon ludique de générer des vœux pour une année qui rock ! :\n\n".$urlNoEncode."\n\nÀ toi de jouer :)";
+                    $body = "Hello, \n\n Une façon ludique de générer des vœux pour une année qui rock !\n\n".$urlNoEncode."\n\nÀ toi de jouer :)";
                 ?>
               <a target="_blank" href="mailto:?subject=<?= rawurlencode($subject) ?>&body=<?= rawurlencode($body) ?>">
                 <div>
