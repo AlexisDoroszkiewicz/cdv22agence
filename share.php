@@ -211,7 +211,7 @@ $urlNoEncode = 'https://2022.seenk.com/result.php?' . $_SERVER['QUERY_STRING'];
                   <p>Mail</p>
                 </div>
               </a>
-              <a href="<?= 'https://2022.seenk.com/screenshot/' . $fullfilename?>" target="_blank" rel="nofollow noopener" download="Seenk2022">
+              <a href="<?= '/screenshot/' . $fullfilename?>" target="_blank" rel="nofollow noopener" download="Seenk2022">
                 <div>
                 <svg viewBox="0 0 66 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g filter="url(#filter0_d_103_1424)">
