@@ -9,7 +9,7 @@ window.addEventListener('resize', setBodyHeight);
 const blanks = document.querySelectorAll('.blank')
 
 blanks.forEach((item) => {
-    item.children[0].style.transform = `scale(1.3) rotate(${Math.ceil(Math.random() * 15) * (Math.round(Math.random()) ? 1 : -1)}deg)`
+    item.children[0].style.transform = `scale(1.3) rotate(${Math.ceil(Math.random() * 12) * (Math.round(Math.random()) ? 1 : -1)}deg)`
 })
 
 // exponential decorative elememnts position

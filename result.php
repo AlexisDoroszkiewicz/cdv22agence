@@ -2,7 +2,9 @@
 
 $filename = $_GET["i1"] . $_GET["i2"] . $_GET["i3"] . $_GET["i4"] . $_GET["i5"] . $_GET["i6"] .$_GET["i7"] . $_GET["i8"] . $_GET["i9"] . $_GET["i10"];
 
-$saveto = './screenshot/' . $filename . '.jpg';
+$fullfilename = $filename . 'v01.jpg';
+
+$saveto = './screenshot/' . $fullfilename;
 
 if(!file_exists($saveto)){
     $data = $_POST['dataUrl'];
@@ -27,8 +29,8 @@ $url = urlencode($_SERVER['QUERY_STRING'])
     <meta property="og:type" content="website">
     <meta property="og:title" content="Make it Rock! - By Seenk">
     <meta property="og:description" content="Pour 2022 faites vos vœux !">
-    <meta property="og:image" content="<?= 'https://2022.seenk.com/screenshot/' . $filename . '.jpg'?>">
-    <meta property="twitter:image" content="<?= 'https://2022.seenk.com/screenshot/' . $filename . '.jpg'?>">
+    <meta property="og:image" content="<?= 'https://2022.seenk.com/screenshot/' . $fullfilename?>">
+    <meta property="twitter:image" content="<?= 'https://2022.seenk.com/screenshot/' . $fullfilename?>">
     <meta property="og:url" content="https://2022.seenk.com/result.php?<?= $url?>">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -282,8 +282,10 @@ header h2 {
     position: absolute;
     top: 0;
     left: -1200px;
-    width: 1200px;
-    height: 630px;
+    /* width: 1200px;
+    height: 630px; */
+    width: 600px;
+    height: 315px;
     display: flex;
     align-items: center;
 }
@@ -296,9 +298,12 @@ header h2 {
 .renderer {
     flex-grow: 1;
     width: 26em;
-    height: 630px;
+    /* height: 630px;
     font-size: 28.75px;
-    line-height: 51.34px;
+    line-height: 51.34px; */
+    height: 315px;
+    font-size: 14px;
+    line-height: 25px;
     margin: 0;
     position: relative;
 }
@@ -309,21 +314,24 @@ header h2 {
 }
 
 #starf {
-    max-width: 86px;
+    /* max-width: 86px; */
+    max-width: 43px;
     bottom: 1em;
     left: -1em;
     transform: rotate(-10deg);
 }
 
 #firef {
-    max-width: 56px;
+    /* max-width: 56px; */
+    max-width: 28px;
     top: 1em;
     right: 0;
     transform: rotate(24deg);
 }
 
 .renderLeft {
-    width: 465px;
+    /* width: 465px; */
+    width: 232px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

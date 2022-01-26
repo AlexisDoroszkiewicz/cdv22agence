@@ -175,7 +175,7 @@ const placeSticker = (e) => {
     selected.children[0].replaceWith(img2);
     anime({
         targets: [img, img2],
-        rotateZ: anime.random(-15, 15),
+        rotateZ: anime.random(-12, 12),
         scale: 1.3,
     });
 };
@@ -249,11 +249,13 @@ const scrollToSubmit = () => {
 const setDataUrl = () => {
     html2canvas(document.querySelector(".rendererContainer"), {
         scale: 2,
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 315,
     }).then((canvas) => {
+        // document.body.appendChild(canvas);
         const dataURL = canvas.toDataURL("image/jpg", 1);
         document.querySelector(".dataUrl").value = dataURL;
+        console.log(dataURL);
     });      
 };
 
