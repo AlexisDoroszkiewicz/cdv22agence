@@ -21,8 +21,7 @@ const stickerPosition = () => {
     go.style.right = (window.innerWidth/100)*(window.innerWidth/100)+ 'px';
     if (heart) {
         heart.style.right = (window.innerWidth/100)*(window.innerWidth/100)+ 'px';
-    }
-    
+    } 
 }
 
 window.addEventListener('resize', stickerPosition);
