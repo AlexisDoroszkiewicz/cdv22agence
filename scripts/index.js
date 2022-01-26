@@ -252,10 +252,8 @@ const setDataUrl = () => {
         width: 600,
         height: 315,
     }).then((canvas) => {
-        // document.body.appendChild(canvas);
         const dataURL = canvas.toDataURL("image/jpg", 1);
         document.querySelector(".dataUrl").value = dataURL;
-        console.log(dataURL);
     });      
 };
 
