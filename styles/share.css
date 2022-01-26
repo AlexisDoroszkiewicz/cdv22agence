@@ -91,7 +91,7 @@ header {
     width: clamp(150px, 40vw, 260px);
     bottom: 0;
     right: 0;
-    transform: rotate(25deg) translate(20%, 10%);
+    transform: rotate(25deg) translate(20%, 40%);
 }
 
 #heartfixed {
