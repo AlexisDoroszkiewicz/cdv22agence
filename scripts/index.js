@@ -77,6 +77,8 @@ const hideModal = () => {
     });
     isModalVisible = false;
     selected = null;
+    html.style.overflow = "auto";
+    removeFocus();
 };
 
 // Calculate element offset from top of page (not viewport) and scroll to its coordinates
@@ -107,6 +109,7 @@ const showModal = () => {
         });
         isModalVisible = true;
     }
+    html.style.overflow = "hidden";
 };
 
 // Turn all blanks to red (all red means no specific one is focused - initial state)
