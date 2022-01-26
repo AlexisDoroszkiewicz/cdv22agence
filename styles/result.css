@@ -1,0 +1,28 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 744px) {
+    a {
+        margin-block: 4em;
+    }
+}
+
+.board {
+    position: relative;
+}
+
+#gofixed {
+    top: 0;
+    transform: rotate(15deg) translate(20%, -30%);
+}
+
+#firefixed {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: clamp(40px, 7vw, 100px);
+    transform: rotate(-34.43deg) translate(-50%, 0);
+}
