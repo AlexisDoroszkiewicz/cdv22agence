@@ -17,6 +17,7 @@
 #gofixed {
     top: 0;
     transform: rotate(15deg) translate(20%, -30%);
+    width: clamp(70px, 20vw, 140px);
 }
 
 #firefixed {
@@ -25,4 +26,8 @@
     left: 0;
     width: clamp(40px, 7vw, 100px);
     transform: rotate(-34.43deg) translate(-50%, 0);
+}
+
+.flexcontainer {
+    justify-content: space-evenly;
 }

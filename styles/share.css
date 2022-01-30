@@ -53,8 +53,10 @@ svg {
 
 footer {
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
-footer img {
+footer a img {
     padding-block: 5vh;
 }
 
@@ -88,11 +90,12 @@ header {
 }
 
 #gofixed {
-    position: fixed;
-    width: clamp(150px, 40vw, 260px);
+    position: absolute;
     bottom: 0;
     right: 0;
     transform: rotate(25deg) translate(20%, 40%);
+    margin: 0;
+    padding: 0;
 }
 
 #heartfixed {

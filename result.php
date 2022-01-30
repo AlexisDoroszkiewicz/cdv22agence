@@ -101,7 +101,7 @@ $url = urlencode($_SERVER['QUERY_STRING'])
 
           <div class="column">
             <header>
-                <img src="./assets/stickers/rock.png" alt="Make it Rock!">
+                <a href="/"><img src="./assets/stickers/rock.png" alt="Make it Rock!"></a>
                 <h1>Make it Rock!</h1>
                 <h2>Pour 2022 faites vos vœux !</h2>
             </header>
