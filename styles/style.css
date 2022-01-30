@@ -554,4 +554,7 @@ footer img {
     .stickers-grid {
         grid-template-columns: repeat(9, 1fr);
     }
+    .steps .token {
+        margin-bottom: 0.4em;
+    }
 }

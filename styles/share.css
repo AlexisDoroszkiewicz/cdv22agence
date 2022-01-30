@@ -1,5 +1,5 @@
 body {
-    max-height: 100vh;
+    /* max-height: 100vh; */
     overflow-x: hidden;
     position: relative;
 }
@@ -7,9 +7,9 @@ body {
 .flexcontainer {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 h2 {
@@ -55,12 +55,13 @@ footer {
     width: 100%;
 }
 footer img {
-    padding: 0;
+    padding-block: 5vh;
 }
 
 .card {
     position: relative;
     width: 100%;
+    margin-block: 2em;
 }
 
 .card p {
@@ -95,7 +96,7 @@ header {
 }
 
 #heartfixed {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: clamp(70px, 20vw, 140px);
@@ -132,5 +133,6 @@ header {
         justify-content: center;
         gap: 1em;
     }
+    
 
 }

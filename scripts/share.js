@@ -1,10 +1,10 @@
-const setBodyHeight = () => {
-    document.querySelector('.flexcontainer').style.height = window.innerHeight + 'px';
-}
+// const setBodyHeight = () => {
+//     document.querySelector('.flexcontainer').style.height = window.innerHeight + 'px';
+// }
 
-setBodyHeight();
+// setBodyHeight();
 
-window.addEventListener('resize', setBodyHeight);
+// window.addEventListener('resize', setBodyHeight);
 
 const blanks = document.querySelectorAll('.blank')
 
