@@ -163,7 +163,7 @@ button {
     left: 0;
     right: 0;
     top: -50%;
-    pointer-events: none;
+    /* pointer-events: none; */
     max-height: 5.5em;
     margin-inline: auto;
 }

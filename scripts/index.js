@@ -20,29 +20,9 @@ var hasClicked = false;
 // -----------------------------------------------------------------
 // What happens when you click on a blank
 const blankHandler = (e) => {
-    // If clicked blank is already filled with a sticker do :
-    if (e.target.firstElementChild.tagName == "IMG") {
-        // place the sticker back in its slot and allow clicks
-        const spot = document.getElementById(
-            e.target.firstElementChild.dataset.name
-        );
-        spot.setAttribute(
-            "src",
-            `./assets/stickers/${e.target.firstElementChild.dataset.name}.png`
-        );
-        spot.style.pointerEvents = "all";
-        // add a blank where sticker was
-        const span = document.createElement("span");
-        span.textContent = "Stickez ici";
-        e.target.children[0].replaceWith(span);
-        // clear hidden input
-        const id = nbFilter(e.target.id);
-        inputs[id - 1].value = "";
-        // disable button
-        document.querySelector('button').style.pointerEvents = "none";
-        document.querySelector('button').setAttribute('disabled', '');
-    }
-
+    if (e.target.tagName == 'IMG') {
+        if (!isModalVisible) showModal();
+        return;}
     // If clicked blank is already selected hide modal and remove focus
     if (e.target == selected) {
         handleModal(e);
@@ -163,6 +143,36 @@ const handleStickers = (e) => {
 };
 
 // Replace blank and render's first child with a copy of clicked sticker
+const replaceImg = (e) => {
+    
+    if (e.target.tagName == "IMG") {
+        
+        // place the sticker back in its slot and allow clicks
+        const spot = document.getElementById(
+            e.target.dataset.name
+        );
+        spot.setAttribute(
+            "src",
+            `./assets/stickers/${e.target.dataset.name}.png`
+        );
+        spot.style.pointerEvents = "all";
+        // clear hidden input
+        const id = nbFilter(e.target.parentElement.id);
+        inputs[id - 1].value = "";
+        e.target.parentElement.addEventListener('click', blankHandler);
+        selected = e.target.parentElement;
+        focus(selected);
+        // add a blank where sticker was
+        const span = document.createElement("span");
+        span.textContent = "Stickez ici";
+        e.target.replaceWith(span);
+        // disable button
+        document.querySelector('button').style.pointerEvents = "none";
+        document.querySelector('button').setAttribute('disabled', '');
+        
+    }
+}
+
 const placeSticker = (e) => {
     let img = document.createElement("img");
     img.setAttribute("src", "./assets/stickers/" + e.target.id + ".png");
@@ -170,9 +180,13 @@ const placeSticker = (e) => {
     img2.setAttribute("src", "./assets/stickers/" + e.target.id + ".png");
     // set a data-name to target the element easily (ID already used by original)
     img2.setAttribute("data-name", e.target.id);
+    img2.setAttribute("data-blank", selected.id);
+    img2.style.cursor = "pointer";
     id = nbFilter(selected.id);
     renders[id - 1].children[0].replaceWith(img);
     selected.children[0].replaceWith(img2);
+    img2.addEventListener('click', replaceImg);
+    selected.removeEventListener('click', blankHandler);
     anime({
         targets: [img, img2],
         rotateZ: anime.random(-12, 12),
