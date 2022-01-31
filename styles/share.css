@@ -105,6 +105,11 @@ header {
     width: clamp(70px, 20vw, 140px);
     transform: rotate(-15deg);
 }
+@media screen and (max-width: 744px) {
+    .blank img {
+        top: 0;
+    }
+}
 
 @media screen and (min-width:744px) {
     .card p {
